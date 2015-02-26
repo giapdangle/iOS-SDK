@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151403A91945D7E100BAC9A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403A81945D7E100BAC9A3 /* Foundation.framework */; };
+		151403AB1945D7E100BAC9A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403AA1945D7E100BAC9A3 /* CoreGraphics.framework */; };
+		151403AD1945D7E100BAC9A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403AC1945D7E100BAC9A3 /* UIKit.framework */; };
+		151403B31945D7E100BAC9A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 151403B11945D7E100BAC9A3 /* InfoPlist.strings */; };
+		151403B51945D7E100BAC9A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 151403B41945D7E100BAC9A3 /* main.m */; };
+		151403B91945D7E200BAC9A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 151403B81945D7E200BAC9A3 /* AppDelegate.m */; };
+		151403BC1945D7E200BAC9A3 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151403BA1945D7E200BAC9A3 /* Main_iPhone.storyboard */; };
+		151403BF1945D7E200BAC9A3 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151403BD1945D7E200BAC9A3 /* Main_iPad.storyboard */; };
+		151403C41945D7E200BAC9A3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151403C31945D7E200BAC9A3 /* Images.xcassets */; };
+		151403CB1945D7E200BAC9A3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403CA1945D7E200BAC9A3 /* XCTest.framework */; };
+		151403CC1945D7E200BAC9A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403A81945D7E100BAC9A3 /* Foundation.framework */; };
+		151403CD1945D7E200BAC9A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151403AC1945D7E100BAC9A3 /* UIKit.framework */; };
+		151403D51945D7E200BAC9A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 151403D31945D7E200BAC9A3 /* InfoPlist.strings */; };
+		151403D71945D7E200BAC9A3 /* TAH_WriteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 151403D61945D7E200BAC9A3 /* TAH_WriteTests.m */; };
+		151403E31945D80800BAC9A3 /* TAHble.m in Sources */ = {isa = PBXBuildFile; fileRef = 151403E21945D80800BAC9A3 /* TAHble.m */; };
+		15CA35111949D1DA006AB49D /* TAHDataWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CA35101949D1DA006AB49D /* TAHDataWriteViewController.m */; };
+		15CA35141949D1F6006AB49D /* TAHbleTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CA35131949D1F6006AB49D /* TAHbleTableController.m */; };
+		15CCF92F1952F9B90096E796 /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CCF92E1952F9B90096E796 /* test2ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		151403CE1945D7E200BAC9A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1514039D1945D7E100BAC9A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 151403A41945D7E100BAC9A3;
+			remoteInfo = "TAH Write";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		151403A51945D7E100BAC9A3 /* TAH Write.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TAH Write.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		151403A81945D7E100BAC9A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		151403AA1945D7E100BAC9A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		151403AC1945D7E100BAC9A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		151403B01945D7E100BAC9A3 /* TAH Write-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAH Write-Info.plist"; sourceTree = "<group>"; };
+		151403B21945D7E100BAC9A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		151403B41945D7E100BAC9A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		151403B61945D7E200BAC9A3 /* TAH Write-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TAH Write-Prefix.pch"; sourceTree = "<group>"; };
+		151403B71945D7E200BAC9A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		151403B81945D7E200BAC9A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		151403BB1945D7E200BAC9A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		151403BE1945D7E200BAC9A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		151403C31945D7E200BAC9A3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		151403C91945D7E200BAC9A3 /* TAH WriteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TAH WriteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		151403CA1945D7E200BAC9A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		151403D21945D7E200BAC9A3 /* TAH WriteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TAH WriteTests-Info.plist"; sourceTree = "<group>"; };
+		151403D41945D7E200BAC9A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		151403D61945D7E200BAC9A3 /* TAH_WriteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TAH_WriteTests.m; sourceTree = "<group>"; };
+		151403E11945D80800BAC9A3 /* TAHble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAHble.h; sourceTree = "<group>"; };
+		151403E21945D80800BAC9A3 /* TAHble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAHble.m; sourceTree = "<group>"; };
+		15CA350F1949D1DA006AB49D /* TAHDataWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAHDataWriteViewController.h; sourceTree = "<group>"; };
+		15CA35101949D1DA006AB49D /* TAHDataWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAHDataWriteViewController.m; sourceTree = "<group>"; };
+		15CA35121949D1F6006AB49D /* TAHbleTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAHbleTableController.h; sourceTree = "<group>"; };
+		15CA35131949D1F6006AB49D /* TAHbleTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAHbleTableController.m; sourceTree = "<group>"; };
+		15CCF92D1952F9B90096E796 /* test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test2ViewController.h; sourceTree = "<group>"; };
+		15CCF92E1952F9B90096E796 /* test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test2ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		151403A21945D7E100BAC9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403AB1945D7E100BAC9A3 /* CoreGraphics.framework in Frameworks */,
+				151403AD1945D7E100BAC9A3 /* UIKit.framework in Frameworks */,
+				151403A91945D7E100BAC9A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		151403C61945D7E200BAC9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403CB1945D7E200BAC9A3 /* XCTest.framework in Frameworks */,
+				151403CD1945D7E200BAC9A3 /* UIKit.framework in Frameworks */,
+				151403CC1945D7E200BAC9A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1514039C1945D7E100BAC9A3 = {
+			isa = PBXGroup;
+			children = (
+				151403AE1945D7E100BAC9A3 /* TAH Write */,
+				151403E41945DC7A00BAC9A3 /* TAH ble Table View */,
+				151403E51945DD0400BAC9A3 /* TAH ble Data Write View */,
+				15CCF92C1952F9830096E796 /* test2 */,
+				151403E01945D7EF00BAC9A3 /* TAH Library */,
+				151403D01945D7E200BAC9A3 /* TAH WriteTests */,
+				151403A71945D7E100BAC9A3 /* Frameworks */,
+				151403A61945D7E100BAC9A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		151403A61945D7E100BAC9A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				151403A51945D7E100BAC9A3 /* TAH Write.app */,
+				151403C91945D7E200BAC9A3 /* TAH WriteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		151403A71945D7E100BAC9A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				151403A81945D7E100BAC9A3 /* Foundation.framework */,
+				151403AA1945D7E100BAC9A3 /* CoreGraphics.framework */,
+				151403AC1945D7E100BAC9A3 /* UIKit.framework */,
+				151403CA1945D7E200BAC9A3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		151403AE1945D7E100BAC9A3 /* TAH Write */ = {
+			isa = PBXGroup;
+			children = (
+				151403B71945D7E200BAC9A3 /* AppDelegate.h */,
+				151403B81945D7E200BAC9A3 /* AppDelegate.m */,
+				151403BA1945D7E200BAC9A3 /* Main_iPhone.storyboard */,
+				151403BD1945D7E200BAC9A3 /* Main_iPad.storyboard */,
+				151403C31945D7E200BAC9A3 /* Images.xcassets */,
+				151403AF1945D7E100BAC9A3 /* Supporting Files */,
+			);
+			path = "TAH Write";
+			sourceTree = "<group>";
+		};
+		151403AF1945D7E100BAC9A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				151403B01945D7E100BAC9A3 /* TAH Write-Info.plist */,
+				151403B11945D7E100BAC9A3 /* InfoPlist.strings */,
+				151403B41945D7E100BAC9A3 /* main.m */,
+				151403B61945D7E200BAC9A3 /* TAH Write-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		151403D01945D7E200BAC9A3 /* TAH WriteTests */ = {
+			isa = PBXGroup;
+			children = (
+				151403D61945D7E200BAC9A3 /* TAH_WriteTests.m */,
+				151403D11945D7E200BAC9A3 /* Supporting Files */,
+			);
+			path = "TAH WriteTests";
+			sourceTree = "<group>";
+		};
+		151403D11945D7E200BAC9A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				151403D21945D7E200BAC9A3 /* TAH WriteTests-Info.plist */,
+				151403D31945D7E200BAC9A3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		151403E01945D7EF00BAC9A3 /* TAH Library */ = {
+			isa = PBXGroup;
+			children = (
+				151403E11945D80800BAC9A3 /* TAHble.h */,
+				151403E21945D80800BAC9A3 /* TAHble.m */,
+			);
+			name = "TAH Library";
+			sourceTree = "<group>";
+		};
+		151403E41945DC7A00BAC9A3 /* TAH ble Table View */ = {
+			isa = PBXGroup;
+			children = (
+				15CA35121949D1F6006AB49D /* TAHbleTableController.h */,
+				15CA35131949D1F6006AB49D /* TAHbleTableController.m */,
+			);
+			name = "TAH ble Table View";
+			sourceTree = "<group>";
+		};
+		151403E51945DD0400BAC9A3 /* TAH ble Data Write View */ = {
+			isa = PBXGroup;
+			children = (
+				15CA350F1949D1DA006AB49D /* TAHDataWriteViewController.h */,
+				15CA35101949D1DA006AB49D /* TAHDataWriteViewController.m */,
+			);
+			name = "TAH ble Data Write View";
+			sourceTree = "<group>";
+		};
+		15CCF92C1952F9830096E796 /* test2 */ = {
+			isa = PBXGroup;
+			children = (
+				15CCF92D1952F9B90096E796 /* test2ViewController.h */,
+				15CCF92E1952F9B90096E796 /* test2ViewController.m */,
+			);
+			name = test2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		151403A41945D7E100BAC9A3 /* TAH Write */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 151403DA1945D7E200BAC9A3 /* Build configuration list for PBXNativeTarget "TAH Write" */;
+			buildPhases = (
+				151403A11945D7E100BAC9A3 /* Sources */,
+				151403A21945D7E100BAC9A3 /* Frameworks */,
+				151403A31945D7E100BAC9A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TAH Write";
+			productName = "TAH Write";
+			productReference = 151403A51945D7E100BAC9A3 /* TAH Write.app */;
+			productType = "com.apple.product-type.application";
+		};
+		151403C81945D7E200BAC9A3 /* TAH WriteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 151403DD1945D7E200BAC9A3 /* Build configuration list for PBXNativeTarget "TAH WriteTests" */;
+			buildPhases = (
+				151403C51945D7E200BAC9A3 /* Sources */,
+				151403C61945D7E200BAC9A3 /* Frameworks */,
+				151403C71945D7E200BAC9A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				151403CF1945D7E200BAC9A3 /* PBXTargetDependency */,
+			);
+			name = "TAH WriteTests";
+			productName = "TAH WriteTests";
+			productReference = 151403C91945D7E200BAC9A3 /* TAH WriteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1514039D1945D7E100BAC9A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = dhirajjadhao;
+				TargetAttributes = {
+					151403C81945D7E200BAC9A3 = {
+						TestTargetID = 151403A41945D7E100BAC9A3;
+					};
+				};
+			};
+			buildConfigurationList = 151403A01945D7E100BAC9A3 /* Build configuration list for PBXProject "TAH Write" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1514039C1945D7E100BAC9A3;
+			productRefGroup = 151403A61945D7E100BAC9A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				151403A41945D7E100BAC9A3 /* TAH Write */,
+				151403C81945D7E200BAC9A3 /* TAH WriteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		151403A31945D7E100BAC9A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403BF1945D7E200BAC9A3 /* Main_iPad.storyboard in Resources */,
+				151403C41945D7E200BAC9A3 /* Images.xcassets in Resources */,
+				151403BC1945D7E200BAC9A3 /* Main_iPhone.storyboard in Resources */,
+				151403B31945D7E100BAC9A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		151403C71945D7E200BAC9A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403D51945D7E200BAC9A3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		151403A11945D7E100BAC9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403B91945D7E200BAC9A3 /* AppDelegate.m in Sources */,
+				15CA35111949D1DA006AB49D /* TAHDataWriteViewController.m in Sources */,
+				151403B51945D7E100BAC9A3 /* main.m in Sources */,
+				151403E31945D80800BAC9A3 /* TAHble.m in Sources */,
+				15CA35141949D1F6006AB49D /* TAHbleTableController.m in Sources */,
+				15CCF92F1952F9B90096E796 /* test2ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		151403C51945D7E200BAC9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151403D71945D7E200BAC9A3 /* TAH_WriteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		151403CF1945D7E200BAC9A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 151403A41945D7E100BAC9A3 /* TAH Write */;
+			targetProxy = 151403CE1945D7E200BAC9A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		151403B11945D7E100BAC9A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				151403B21945D7E100BAC9A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		151403BA1945D7E200BAC9A3 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				151403BB1945D7E200BAC9A3 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		151403BD1945D7E200BAC9A3 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				151403BE1945D7E200BAC9A3 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		151403D31945D7E200BAC9A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				151403D41945D7E200BAC9A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		151403D81945D7E200BAC9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		151403D91945D7E200BAC9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		151403DB1945D7E200BAC9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TAH Write/TAH Write-Prefix.pch";
+				INFOPLIST_FILE = "TAH Write/TAH Write-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		151403DC1945D7E200BAC9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TAH Write/TAH Write-Prefix.pch";
+				INFOPLIST_FILE = "TAH Write/TAH Write-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		151403DE1945D7E200BAC9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TAH Write.app/TAH Write";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TAH Write/TAH Write-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TAH WriteTests/TAH WriteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		151403DF1945D7E200BAC9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TAH Write.app/TAH Write";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TAH Write/TAH Write-Prefix.pch";
+				INFOPLIST_FILE = "TAH WriteTests/TAH WriteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		151403A01945D7E100BAC9A3 /* Build configuration list for PBXProject "TAH Write" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151403D81945D7E200BAC9A3 /* Debug */,
+				151403D91945D7E200BAC9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		151403DA1945D7E200BAC9A3 /* Build configuration list for PBXNativeTarget "TAH Write" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151403DB1945D7E200BAC9A3 /* Debug */,
+				151403DC1945D7E200BAC9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		151403DD1945D7E200BAC9A3 /* Build configuration list for PBXNativeTarget "TAH WriteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151403DE1945D7E200BAC9A3 /* Debug */,
+				151403DF1945D7E200BAC9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1514039D1945D7E100BAC9A3 /* Project object */;
+}
