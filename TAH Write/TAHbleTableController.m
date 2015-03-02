@@ -1,27 +1,25 @@
 //
-//  TAHDataWriteViewController.h
-//  TAH
-//
-//  Created by TAHs on 7/13/12.
-//  Copyright (c) 2012 jnhuamao.cn. All rights reserved.
+//  TAHbleTableController.m
+//  Created by DHIRAJ JADHAO on 21/05/14.
+//  Copyright (c) 2014 DHIRAJJADHAO. All rights reserved.
 //
 
+#import <AudioToolbox/AudioToolbox.h>
 #import "TAHbleTableController.h"
-#import "TAHDataWriteViewController.h"
-#import "test2ViewController.h"
+#import "HomeViewController.h"
+#import "TAHble.h"
 
 @interface TAHbleTableController ()
 
 @end
 
 @implementation TAHbleTableController
-
 @synthesize TAHTableView;
+
 @synthesize Scan;
+
 @synthesize sensor;
 @synthesize peripheralViewControllerArray;
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,23 +34,38 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"TAH Write";
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]){
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-    }
-    sensor = [[TAHble alloc] init];
-    [sensor setup];
-    sensor.delegate = self;
+
+    
+   // Settings Up Sensor Delegate
+   sensor = [[TAHble alloc] init];
+   [sensor setup];
+   self.sensor.delegate = self;
+
     
     peripheralViewControllerArray = [[NSMutableArray alloc] init];
     
+  
+    // Set Connection Status Image
+    [self UpdateConnectionStatusLabel];
     
-    UIColor *lightBlue = [UIColor colorWithRed:0.0 / 255.0 green:174.0 / 255.0 blue:239.0 / 255.0 alpha:1.0];
     
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-    self.navigationController.navigationBar.barTintColor = lightBlue;
+    /////////////////// Navigation Bar Customisation ////////////
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    ////////////////////////////////////////////////////////////////////////
+    
+
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    // Set Connection Status Image
+    [self UpdateConnectionStatusLabel];
 }
 
 - (void)viewDidUnload
@@ -63,12 +76,29 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+///////////// Update Device Connection Status Image //////////
+-(void)UpdateConnectionStatusLabel
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    
+    
+    if (sensor.activePeripheral.state)
+    {
+        
+        ConnectionStatusLabel.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:255.0/255.0 blue:0.0/255.0 alpha:1.0];
+    }
+    else
+    {
+        
+        ConnectionStatusLabel.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:1.0];
+    }
 }
 
+
+
 - (IBAction)scanTAHDevices:(id)sender {
+    
+    
+    
     if ([sensor activePeripheral]) {
         if (sensor.activePeripheral.state == CBPeripheralStateConnected) {
             [sensor.manager cancelPeripheralConnection:sensor.activePeripheral];
@@ -84,10 +114,12 @@
     
     sensor.delegate = self;
     printf("now we are searching device...\n");
-    [Scan setTitle:@"Scaning" forState:UIControlStateNormal];
+    [Scan setTitle:@"Scanning" forState:UIControlStateNormal];
     [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scanTimer:) userInfo:nil repeats:NO];
     
     [sensor findTAHPeripherals:5];
+    
+    [self UpdateConnectionStatusLabel]; // Update Connection Status Label
 }
 
 /*
@@ -109,7 +141,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row = [indexPath row];
-    TAHDataWriteViewController *controller = [peripheralViewControllerArray objectAtIndex:row];
+    HomeViewController *controller = [peripheralViewControllerArray objectAtIndex:row];
     
     if (sensor.activePeripheral && sensor.activePeripheral != controller.peripheral) {
         [sensor disconnect:sensor.activePeripheral];
@@ -122,25 +154,28 @@
     [Scan setTitle:@"Scan" forState:UIControlStateNormal];
     
     
+    //[self performSegueWithIdentifier: @"home" sender: self];
    
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"test1"])
+    if ([[segue identifier] isEqualToString:@"home"])
     {
-        TAHDataWriteViewController *vc = [segue destinationViewController];
-        //vc.dataThatINeedFromTheFirstViewController = self.theDataINeedToPass;
+        HomeViewController *vc = [segue destinationViewController];
         vc.sensor = self.sensor;
+        
+        // Changes title of the Back Button in destintion controller
+        UIBarButtonItem *newBackButton =
+        [[UIBarButtonItem alloc] initWithTitle:@"Discover"
+                                         style:UIBarButtonItemStyleBordered
+                                        target:nil
+                                        action:nil];
+        [[self navigationItem] setBackBarButtonItem:newBackButton];
+        
     }
-    
-    else if ([[segue identifier] isEqualToString:@"test2"])
-    {
-        test2ViewController *vc = [segue destinationViewController];
-        //vc.dataThatINeedFromTheFirstViewController = self.theDataINeedToPass;
-        vc.sensor = self.sensor;
-    }
+
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -153,11 +188,12 @@
     
     // Configure the cell
     NSUInteger row = [indexPath row];
-    TAHDataWriteViewController *controller = [peripheralViewControllerArray objectAtIndex:row];
+    HomeViewController *controller = [peripheralViewControllerArray objectAtIndex:row];
     CBPeripheral *peripheral = [controller peripheral];
     cell.textLabel.text = peripheral.name;
-    //cell.detailTextLabel.text = [NSString stringWithFormat:<#(NSString *), ...#>
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.textColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    cell.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:128.0/255.0 blue:0.0/255.0 alpha:1.0];
     return cell;
 }
 
@@ -170,7 +206,7 @@
 
 -(void) peripheralFound:(CBPeripheral *)peripheral
 {
-    TAHDataWriteViewController *controller = [[TAHDataWriteViewController alloc] init];
+    HomeViewController *controller = [[HomeViewController alloc] init];
     controller.peripheral = peripheral;
     controller.sensor = sensor;
     [peripheralViewControllerArray addObject:controller];
@@ -178,14 +214,24 @@
    
 }
 
-- (IBAction)test1:(id)sender {
+
+//recv data
+-(void) TAHbleCharValueUpdated:(NSString *)UUID value:(NSData *)data
+{
+    NSString *value = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     
-     [self performSegueWithIdentifier: @"test1" sender: self];
+    NSLog(@"%@",value);
 }
 
-- (IBAction)test2:(id)sender {
+
+
+
+- (IBAction)home:(id)sender {
     
-     [self performSegueWithIdentifier: @"test2" sender: self];
+     [self performSegueWithIdentifier: @"home" sender: self];
+    
+
+   
 }
 
 
@@ -193,12 +239,26 @@
 {
     CFStringRef s = CFUUIDCreateString(kCFAllocatorDefault, (__bridge CFUUIDRef )sensor.activePeripheral.identifier);
     NSLog(@"%@",s);
+
     
+    // Set Connection Status Image
+    [self UpdateConnectionStatusLabel];
     
 }
 
 -(void)setDisconnect
 {
+    [sensor disconnect:sensor.activePeripheral];
+    
     NSLog(@"TAH Device Disconnected");
+    
+    
+    //////// Local Alert Settings
+    
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    /////////////////////////////////////////////
+    
+    // Set Connection Status Image
+    [self UpdateConnectionStatusLabel];
 }
 @end

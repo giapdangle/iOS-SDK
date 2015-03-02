@@ -1,21 +1,23 @@
 //
-//  BLEDeviceViewController.h
-//  TAH
+//  TAHbleTableController.h
+//  Created by DHIRAJ JADHAO on 21/05/14.
+//  Copyright (c) 2014 DHIRAJJADHAO. All rights reserved.
 //
-//  Created by TAHs on 7/13/12.
-//  Copyright (c) 2012 jnhuamao.cn. All rights reserved.
-//
+
+
 
 #import <UIKit/UIKit.h>
 
 #import "TAHble.h"
 
+@class BLEDeviceViewController;
 
 @interface TAHbleTableController : UIViewController<BTSmartSensorDelegate, UITableViewDelegate, UITableViewDataSource>
 {
 
-    IBOutlet UIButton *test1;
-    IBOutlet UIButton *test2;
+    IBOutlet UIButton *home;
+    
+    IBOutlet UILabel *ConnectionStatusLabel;
 
 }
 
@@ -30,8 +32,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *Scan;
 
-- (IBAction)test1:(id)sender;
-- (IBAction)test2:(id)sender;
+- (IBAction)home:(id)sender;
 
 
 @end

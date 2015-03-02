@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "151403A41945D7E100BAC9A3"
-               BuildableName = "TAH Write.app"
-               BlueprintName = "TAH Write"
-               ReferencedContainer = "container:TAH Write.xcodeproj">
+               BuildableName = "Tah Write.app"
+               BlueprintName = "Tah Write"
+               ReferencedContainer = "container:Tah Write.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "151403C81945D7E200BAC9A3"
-               BuildableName = "TAH WriteTests.xctest"
-               BlueprintName = "TAH WriteTests"
-               ReferencedContainer = "container:TAH Write.xcodeproj">
+               BuildableName = "Tah Write.xctest"
+               BlueprintName = "Tah WriteTests"
+               ReferencedContainer = "container:Tah Write.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151403A41945D7E100BAC9A3"
-            BuildableName = "TAH Write.app"
-            BlueprintName = "TAH Write"
-            ReferencedContainer = "container:TAH Write.xcodeproj">
+            BuildableName = "Tah Write.app"
+            BlueprintName = "Tah Write"
+            ReferencedContainer = "container:Tah Write.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151403A41945D7E100BAC9A3"
-            BuildableName = "TAH Write.app"
-            BlueprintName = "TAH Write"
-            ReferencedContainer = "container:TAH Write.xcodeproj">
+            BuildableName = "Tah Write.app"
+            BlueprintName = "Tah Write"
+            ReferencedContainer = "container:Tah Write.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "151403A41945D7E100BAC9A3"
-            BuildableName = "TAH Write.app"
-            BlueprintName = "TAH Write"
-            ReferencedContainer = "container:TAH Write.xcodeproj">
+            BuildableName = "Tah Write.app"
+            BlueprintName = "Tah Write"
+            ReferencedContainer = "container:Tah Write.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
